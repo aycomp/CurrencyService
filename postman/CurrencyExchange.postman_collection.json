@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "ca254ba3-b992-40b8-8104-c0358af0586a",
+		"name": "CurrencyExchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23873629"
+	},
+	"item": [
+		{
+			"name": "Exchange Rate - Endpoint 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"SourceCurrency\": \"USD\",\n    \"TargetCurrency\": \"GBP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/currency/exchange-rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"currency",
+						"exchange-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Conversion - Endpoint 2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Amount\": 100,\n    \"SourceCurrency\": \"USD\",\n    \"TargetCurrency\": \"GBP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/currency/currency-conversion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"currency",
+						"currency-conversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Historical Currency Conversion - Endpoint 3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Amount\": 100,\n    \"SourceCurrency\": \"USD\",\n    \"TargetCurrency\": \"GBP\",\n    \"Date\": \"2025-05-31\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/currency/historical-currency-conversion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"currency",
+						"historical-currency-conversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk File Processing - Endpoint 4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ayse.ozdemir/Desktop/projects/openPayd/CurrencyExhange/src/main/resources/templates/currency-conversion-file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/currency/bulk-currency-conversion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"currency",
+						"bulk-currency-conversion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
