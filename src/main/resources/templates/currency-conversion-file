@@ -1,0 +1,5 @@
+amount;sourceCurrency;targetCurrency
+100;USD;TRY
+100;USD;CAD
+100;USD;EUR
+100;USD;GBP
