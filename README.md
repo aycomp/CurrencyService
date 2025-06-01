@@ -41,6 +41,14 @@ mvn test
   amount;source;target
   100;USD;TRY
   ```
+## Postman Collection
+
+A Postman collection for testing the API is included in the `postman` directory:
+- [postman/CurrencyService.postman_collection.json](postman/CurrencyService.postman_collection.json)
+
+## API Documentation
+
+API documentation with request and response examples is provided in [API_DOCUMENTATION.md](API_DOCUMENTATION.md).
 
 ## Notes
 
